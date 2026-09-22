@@ -60,18 +60,20 @@ function Header() {
   }, [open]);
 
   return (
-    <header className="site-header">
-      <div className="header-inner">
-        <a className="brand" href="#top" aria-label="Roman Hrydin, home">
-          <span className="brand-mark">RH</span>
-          <span className="brand-copy"><strong>Roman Hrydin</strong><small>Full-Stack Developer</small></span>
-        </a>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
-        </nav>
-        <Button className="header-cv" asChild><a href={cvAsset.url} download="Roman-Hrydin-CV-English.pdf"><Download />Download CV</a></Button>
-        <Button className="menu-button" variant="ghost" size="icon" onClick={() => setOpen(true)} aria-label="Open navigation menu"><Menu /></Button>
-      </div>
+    <>
+      <header className="site-header">
+        <div className="header-inner">
+          <a className="brand" href="#top" aria-label="Roman Hrydin, home">
+            <span className="brand-mark">RH</span>
+            <span className="brand-copy"><strong>Roman Hrydin</strong><small>Full-Stack Developer</small></span>
+          </a>
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
+          </nav>
+          <Button className="header-cv" asChild><a href={cvAsset.url} download="Roman-Hrydin-CV-English.pdf"><Download />Download CV</a></Button>
+          <Button className="menu-button" variant="ghost" size="icon" onClick={() => setOpen(true)} aria-label="Open navigation menu"><Menu /></Button>
+        </div>
+      </header>
       {open ? (
         <div className="mobile-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
           <div className="mobile-panel-top"><span className="brand-mark">RH</span><Button variant="ghost" size="icon" onClick={() => setOpen(false)} aria-label="Close navigation menu"><X /></Button></div>
@@ -81,7 +83,7 @@ function Header() {
           <Button asChild><a href={cvAsset.url} download="Roman-Hrydin-CV-English.pdf"><Download />Download CV</a></Button>
         </div>
       ) : null}
-    </header>
+    </>
   );
 }
 
@@ -116,7 +118,7 @@ function CertificateCard({ institution, program, duration, year, image, alt }: {
       <Dialog>
         <DialogTrigger asChild>
           <button className="certificate-image" aria-label={`View ${institution} certificate at full size`}>
-            <img src={image} alt={alt} loading="lazy" />
+            <img src={image} alt={alt} />
             <span>View certificate <ArrowUpRight /></span>
           </button>
         </DialogTrigger>
