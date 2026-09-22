@@ -118,7 +118,17 @@ export const projects: Project[] = [
     role: "Full-Stack Developer",
     description:
       "A modern car rental marketplace with a searchable vehicle catalog, advanced filtering, detailed car pages, and booking requests.",
-    stack: ["Next.js", "React", "TypeScript", "TanStack Query", "REST API", "Axios", "Formik", "Yup", "CSS Modules"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TanStack Query",
+      "REST API",
+      "Axios",
+      "Formik",
+      "Yup",
+      "CSS Modules",
+    ],
     contributions: [
       "Implemented server-side catalog data fetching with pagination.",
       "Added filtering by brand, price, and mileage.",
@@ -136,7 +146,15 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     description:
       "A language-learning teacher marketplace where users can browse teachers, filter results, manage favorites, authenticate, and submit lesson booking requests.",
-    stack: ["React", "TypeScript", "Firebase", "React Query", "CSS Modules", "React Hook Form", "Yup"],
+    stack: [
+      "React",
+      "TypeScript",
+      "Firebase",
+      "React Query",
+      "CSS Modules",
+      "React Hook Form",
+      "Yup",
+    ],
     contributions: [
       "Created teacher listing, filtering, and pagination flows.",
       "Implemented authentication, favorites, and protected functionality.",
@@ -173,18 +191,21 @@ export const professionalBackground = [
     role: "Soldier",
     organization: "Armed Forces of Ukraine",
     dates: "Feb 2022 — Present",
-    detail: "High-discipline teamwork, accountability, following technical procedures, and working under pressure.",
+    detail:
+      "High-discipline teamwork, accountability, following technical procedures, and working under pressure.",
   },
   {
     role: "Delivery Specialist",
     organization: "Nova Post",
     dates: "Apr 2020 — Feb 2022",
-    detail: "Logistics coordination, client communication, task prioritization, and time-sensitive operations.",
+    detail:
+      "Logistics coordination, client communication, task prioritization, and time-sensitive operations.",
   },
   {
     role: "Tour Guide",
     organization: "Accord-Tour Ltd.",
     dates: "May 2019 — Mar 2020",
-    detail: "Led international groups, managed complex schedules, and solved organizational and logistical problems.",
+    detail:
+      "Led international groups, managed complex schedules, and solved organizational and logistical problems.",
   },
 ];
