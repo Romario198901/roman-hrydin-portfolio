@@ -408,7 +408,7 @@ export function Portfolio() {
           </div>
         </section>
 
-        <section className="section background-section">
+        <section className="section background-section" id="experience">
           <div className="container">
             <SectionHeading label="Professional Background" title="Experience beyond the code" />
             <div className="background-list">
