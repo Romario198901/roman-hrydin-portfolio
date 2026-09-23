@@ -1,223 +1,135 @@
 # Roman Hrydin Portfolio
 
-Create a complete, production-quality personal developer portfolio website for:
+A modern personal portfolio website for Roman Hrydin, built with React, TypeScript, Vite, and TanStack Router. The site presents his profile as a junior full-stack developer, highlights key projects, showcases technologies, and offers a downloadable CV.
 
-ROMAN HRYDIN
-Junior Full-Stack Developer
+## Overview
 
-IMPORTANT:
-Build an original portfolio design.
+This portfolio is designed to be:
 
-The reference screenshots provided separately should be used ONLY as inspiration for:
-- information architecture;
-- section order;
-- content hierarchy;
-- responsive behavior;
-- general idea of project cards and contact cards.
+- clean and professional
+- mobile-responsive
+- recruiter-friendly
+- easy to update with new projects and certifications
+- focused on practical full-stack work and product outcomes
 
-DO NOT copy:
-- the visual design;
-- exact layouts;
-- gradients;
-- backgrounds;
-- decorative elements;
-- card shapes;
-- typography;
-- spacing;
-- logo;
-- animations;
-- or any distinctive visual identity from the reference website.
+## Live site
 
-The final website must have its own visual identity based primarily on Roman Hrydin's CV.
+The app is configured to run locally in development mode and can be built for production with Vite.
 
-==================================================
-1. TECHNICAL REQUIREMENTS
-==================================================
+## Tech stack
 
-Build the website as a modern production-ready application using:
-
-- Next.js
-- App Router
-- React
+- React 19
 - TypeScript
-- CSS Modules or another clean maintainable styling approach appropriate for Next.js
-- semantic HTML5
-- responsive and adaptive design
-- reusable React components
-- optimized images using next/image where appropriate
+- Vite
+- TanStack Router
+- TanStack Query
+- Tailwind CSS
+- shadcn-style UI primitives
+- Lucide React icons
+- ESLint + Prettier
 
-The project must be structured so that it can later be deployed to Vercel.
+## Features
 
-Do NOT use Vite.
+- Sticky header with navigation and CV download button
+- Responsive hero section with personal introduction
+- About section with professional summary and background
+- Technology stack grouped by frontend, backend/data, and workflow
+- Featured project cards with impact-focused contributions and stack tags
+- Certificate modals for education and certifications
+- Contact links for GitHub, LinkedIn, and email
+- Mobile navigation drawer for smaller screens
 
-Keep the architecture clean and understandable for a junior full-stack developer who may later edit and maintain the project manually.
+## Project structure
 
-Use Server Components by default where possible.
-Use Client Components only where browser interaction requires them.
+```text
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── hooks/
+│   ├── lib/
+│   ├── routes/
+│   ├── router.tsx
+│   ├── server.ts
+│   ├── start.ts
+│   └── styles.css
+├── components.json
+├── eslint.config.js
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+├── bunfig.toml
+├── README.md
+└── public/
+```
 
-Avoid unnecessary dependencies.
+## Getting started
 
-The project must successfully support:
+### Prerequisites
 
+- Node.js 18+
+- npm or Bun
+
+### Install dependencies
+
+```bash
 npm install
+```
+
+### Run the development server
+
+```bash
 npm run dev
+```
+
+The app will start in development mode with Vite and can be opened in the browser using the local URL shown in the terminal.
+
+### Build for production
+
+```bash
 npm run build
+```
 
-The production build must complete without TypeScript or ESLint errors.
+### Preview production build
 
-==================================================
-2. DESIGN DIRECTION
-==================================================
+```bash
+npm run preview
+```
 
-The visual identity should be inspired primarily by Roman's CV.
+## Available scripts
 
-Use a clean, modern, professional developer portfolio aesthetic.
+| Script | Purpose |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Create a production build |
+| `npm run build:dev` | Create a development-mode build |
+| `npm run preview` | Preview the built app locally |
+| `npm run lint` | Run ESLint across the project |
+| `npm run format` | Format the codebase with Prettier |
 
-PRIMARY COLOR DIRECTION:
+## Content model
 
-Background:
-#FFFFFF or a slightly warm off-white such as #FAFAF8
+The portfolio content is centralized in `src/data/portfolio.ts`, which contains:
 
-Primary text:
-#181818 / #202020
+- navigation items
+- technology groups
+- project definitions
+- professional background information
 
-Secondary text:
-#555555 / #666666
+This makes the site easy to maintain and update as new experience data or projects become available.
 
-Primary accent:
-warm yellow / golden yellow inspired by the headings in the CV.
+## Notes
 
-Suggested accent range:
-#F5B800
-#F4B400
-#EAAA00
+- The CV file and project images are stored in `src/assets` and referenced through asset metadata.
+- Navigation and sections are designed for a modern portfolio presentation rather than a generic landing page.
+- The app uses a Vite + React setup, so deployment targets should align with the current project configuration rather than a Next.js structure.
 
-Use dark graphite where stronger contrast is required.
+## License
 
-Optional very light neutral sections:
-#F5F5F2
-#F8F8F6
+This project is for personal portfolio use and not currently published as a package or library.
 
-Borders:
-light neutral grey.
-
-The yellow accent should be used intentionally for:
-- section labels;
-- small decorative elements;
-- active navigation;
-- icons;
-- buttons;
-- tags;
-- project highlights;
-- hover states.
-
-Do NOT turn the whole website yellow.
-
-The overall visual impression should be:
-
-- professional;
-- minimal;
-- modern;
-- technically oriented;
-- confident;
-- clean;
-- readable;
-- suitable for recruiters and engineering teams.
-
-Avoid excessive gradients, glassmorphism, neon effects, or overly futuristic visuals.
-
-The CV should remain the main visual inspiration.
-
-==================================================
-3. TYPOGRAPHY
-==================================================
-
-Use a modern sans-serif font available through next/font.
-
-Good options:
-- Inter
-- Manrope
-- Geist
-
-Use strong typography hierarchy.
-
-Hero name:
-very large and bold.
-
-Section titles:
-large and confident.
-
-Body:
-high readability and comfortable line-height.
-
-Use uppercase small labels with increased letter spacing for section identifiers such as:
-
-ABOUT
-TECH STACK
-PROJECTS
-EDUCATION
-CONTACT
-
-These labels can use the yellow accent.
-
-==================================================
-4. GLOBAL LAYOUT
-==================================================
-
-Use a centered responsive container.
-
-Recommended max width:
-1200–1280px.
-
-Desktop:
-generous horizontal whitespace.
-
-Tablet:
-reduce gaps and paddings.
-
-Mobile:
-single-column layouts and comfortable touch targets.
-
-Recommended section order:
-
-1. Header
-2. Hero / Developer introduction
-3. About / short professional summary
-4. Technology Stack
-5. Featured Projects
-6. Education & Certifications
-7. CV call-to-action
-8. Contact
-9. Footer
-
-The transition between sections should feel cohesive.
-
-==================================================
-5. HEADER
-==================================================
-
-Create a sticky or fixed header.
-
-Desktop navigation:
-
-Roman Hrydin / developer mark on the left.
-
-Navigation on the right:
-
-About
-Stack
-Projects
-Education
-Contact
-
-Add a visually distinct CTA:
-
-Download CV
-
-Clicking navigation links should smoothly scroll to their respective sections.
-
-On mobile:
-replace desktop navigation with a hamburger menu.
 
 The mobile menu must be accessible:
 - proper aria labels;
